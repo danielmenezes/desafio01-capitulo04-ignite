@@ -6,7 +6,7 @@ import {
   useBreakpointValue
 } from "@chakra-ui/react";
 
-export function Banner() {
+export function BannerHome() {
   const isWideVersion = useBreakpointValue({
     lg: false,
     xl: true,

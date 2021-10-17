@@ -1,7 +1,7 @@
 import { Flex, Text, Center, Divider, Box } from '@chakra-ui/react'
 import Head from 'next/head'
 import { Header } from '../components/Header'
-import { Banner } from '../components/Banner'
+import { BannerHome } from '../components/BannerHome'
 import { TravelTypesMenu } from '../components/TravelTypesMenu';
 import { Slide } from '../components/slide/Slide';
 
@@ -12,7 +12,7 @@ export default function Home() {
       w="100vw"
     >
       <Header />
-      <Banner />
+      <BannerHome />
       <TravelTypesMenu />
 
       <Divider
