@@ -39,6 +39,7 @@ export function HomeBanner() {
           <Text
             fontSize={["sm", "md", "xl"]}
             lineHeight={["1.313rem", "1.438rem", "1.875rem"]}
+            fontWeight="400"
             color="gray.50"
           >
             Chegou a hora de tirar do papel a viagem que você <br />

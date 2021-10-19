@@ -7,11 +7,14 @@ export const theme = extendTheme({
       "300": "#999999",
       "100": "#DADADA",
       "50": "#F5F8FA",
+    },
+    orange: {
+      "600": "#FFBA08"
     }
   },
   fonts: {
-    heading: 'Poppins',
-    body: 'Poppins'
+    heading: 'Poppins, sans-serif',
+    body: 'Poppins, sans-serif',
   },
   styles: {
     global: {

@@ -16,10 +16,10 @@ export function ContinentBanner() {
       maxW="1440px"
       w="100%"
       mx="auto"
-      h={["150px", "350px", "350px", "500px"]}
+      h={["150px", "350px", "350px", "350px", "500px"]}
       align={["center", "center", "flex-end"]}
       justify={["center", "center", "flex-start"]}
-      bgImage="url('/images/background.svg')"
+      bgImage="url('/images/bannereuropa.png')"
       bgSize="cover"
     >
       {isWideVersion
