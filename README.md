@@ -9,4 +9,5 @@ $ yarn
 
 #### Para executar a aplicação.
 $ yarn server
+
 $ yarn dev
