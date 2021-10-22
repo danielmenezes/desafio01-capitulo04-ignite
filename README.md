@@ -11,3 +11,6 @@ $ yarn
 $ yarn server
 
 $ yarn dev
+
+------------------------------------------------------------------------------
+Obs: As imagens das cidades adicionadas para teste, são apenas do continente europeu.
