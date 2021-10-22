@@ -5,13 +5,22 @@ import { Text, Box, Center, useBreakpointValue } from '@chakra-ui/react';
 import { SlideItem } from './SlideItem';
 
 import style from './styles.module.scss';
-
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-export function Slide() {
+type continent = {
+  id: number;
+  name: string;
+  description: string;
+  background: string;
+}
+
+interface SlideProps {
+  continents: continent[]
+}
+
+export function Slide({ continents }: SlideProps) {
   const isWideVersion = useBreakpointValue({
     base: false,
     md: true,
@@ -50,48 +59,18 @@ export function Slide() {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <SlideItem
-            title='Europa'
-            subtitle='O continente mais antigo.'
-            img='/images/europa.png'
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideItem
-            title='América do Sul'
-            subtitle='O continente mais belo.'
-            img='/images/america-do-sul.png'
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideItem
-            title='América do Norte'
-            subtitle='O segundo maior continente do mundo.'
-            img='/images/america-do-norte.png'
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideItem
-            title='Ásia'
-            subtitle='O continente mais populoso.'
-            img='/images/asia.png'
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideItem
-            title='África'
-            subtitle='O continente mais diverso.'
-            img='/images/africa.png'
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideItem
-            title='Oceania'
-            subtitle='O continente composto por várias ilhas'
-            img='/images/oceania.png'
-          />
-        </SwiperSlide>
+        {continents.map(continent => {
+          return (
+            <SwiperSlide key={continent.id}>
+              <SlideItem
+                id={continent.id}
+                name={continent.name}
+                description={continent.description}
+                background={`/images/continents/${continent.background}`}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </Box >
   )

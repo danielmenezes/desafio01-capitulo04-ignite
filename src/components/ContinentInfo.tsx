@@ -1,7 +1,13 @@
 import { Text, Flex, Tooltip } from "@chakra-ui/react";
 import { InfoOutlineIcon } from '@chakra-ui/icons';
 
-export function ContinentInfo() {
+interface ContinentInfoProps {
+  num_country: number;
+  num_languages: number,
+  most_visited_countries: number,
+}
+
+export function ContinentInfo({ num_country, num_languages, most_visited_countries }: ContinentInfoProps) {
 
   return (
     <Flex
@@ -13,7 +19,7 @@ export function ContinentInfo() {
     >
       <Flex direction="column" align="center">
         <Text fontWeight="600" color="orange.600" fontSize={["2xl", "5xl"]} lineHeight={["9", "4.5rem"]}>
-          50
+          {num_country}
         </Text>
         <Text fontWeight="600" fontSize={["lg", "2xl"]} lineHeight={["1.688rem", "9"]}>
           países
@@ -21,7 +27,7 @@ export function ContinentInfo() {
       </Flex>
       <Flex direction="column" align="center">
         <Text fontWeight="600" color="orange.600" fontSize={["2xl", "5xl"]} lineHeight={["9", "4.5rem"]}>
-          60
+          {num_languages}
         </Text>
         <Text fontWeight="600" fontSize={["lg", "2xl"]} lineHeight={["1.688rem", "9"]}>
           línguas
@@ -29,13 +35,13 @@ export function ContinentInfo() {
       </Flex>
       <Flex direction="column" align="center">
         <Text fontWeight="600" color="orange.600" fontSize={["2xl", "5xl"]} lineHeight={["9", "4.5rem"]}>
-          27
+          {most_visited_countries}
         </Text>
         <Flex align="center">
           <Text fontWeight="600" mr="5px" fontSize={["lg", "2xl"]} lineHeight={["1.688rem", "9"]}>
             cidades +100
           </Text>
-          <Tooltip color="gray.300" bg="transparent" label="100 maiores cidades">
+          <Tooltip color="gray.300" bg="transparent" label="Cidades mais visitadas">
             <InfoOutlineIcon color="gray.300" />
           </Tooltip>
         </Flex>

@@ -1,6 +1,10 @@
 import { Text, Box } from "@chakra-ui/react";
 
-export function ContinentBio() {
+interface ContinentBioProps {
+  about: string;
+}
+
+export function ContinentBio({ about }: ContinentBioProps) {
 
   return (
     <Box
@@ -15,10 +19,7 @@ export function ContinentBio() {
         fontSize={["sm", "sm", "lg", "2xl"]}
         lineHeight={["1.313rem", "1.313rem", "8", "9"]}
       >
-        A Europa é, por convenção, um dos seis continentes do mundo.
-        Compreendendo a península ocidental da Eurásia,
-        a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais,
-        o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
+        {about}
       </Text>
     </Box>
   );

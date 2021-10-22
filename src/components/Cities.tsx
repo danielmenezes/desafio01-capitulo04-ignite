@@ -6,7 +6,21 @@ import {
 } from "@chakra-ui/react";
 import { CitieCard } from "./CitieCard";
 
-export function Cities() {
+type Citie = {
+  id: number;
+  name: string;
+  bg: string;
+  country: {
+    flag: string;
+    name: string;
+  };
+}
+
+interface CitiesProps {
+  cities: Citie[];
+}
+
+export function Cities({ cities }: CitiesProps) {
 
   return (
     <Flex
@@ -29,23 +43,13 @@ export function Cities() {
         gap={[4, 8, 12]}
         templateColumns="repeat(12, 1fr)"
       >
-        <GridItem colSpan={[12, 6, 6, 4, 3]}>
-          <CitieCard />
-        </GridItem>
-        <GridItem colSpan={[12, 6, 6, 4, 3]}>
-          <CitieCard />
-        </GridItem>
-        <GridItem colSpan={[12, 6, 6, 4, 3]}>
-          <CitieCard />
-        </GridItem>
-        <GridItem colSpan={[12, 6, 6, 4, 3]}>
-          <CitieCard />
-        </GridItem>
-        <GridItem colSpan={[12, 6, 6, 4, 3]}>
-          <CitieCard />
-        </GridItem>
-
-
+        {cities.map((citie) => {
+          return (
+            <GridItem colSpan={[12, 6, 6, 4, 3]}>
+              <CitieCard citie={citie} />
+            </GridItem>
+          );
+        })}
 
       </Grid>
     </Flex>

@@ -1,26 +1,33 @@
-import { Text, Flex, Box, Center, Image } from '@chakra-ui/react';
+import { Text, Flex, Box, Image } from '@chakra-ui/react';
+import Link from 'next/link';
 
 interface SlideItemProps {
-  title: string;
-  subtitle: string;
-  img: string;
+  id: number;
+  name: string;
+  description: string
+  background: string;
 }
 
-export function SlideItem({ title, subtitle, img }: SlideItemProps) {
+export function SlideItem({ id, name, description, background }: SlideItemProps) {
   return (
-    <Box>
+    <Flex
+      align="center"
+      justify="center"
+      position="relative"
+    >
       <Image
-        position="relative"
-        src={img}
+        src={background}
         filter={"brightness(65%)"}
         h={["250px", "350px", "450px"]}
       />
-      <Center position="absolute" left="0" top="0" right="0" bottom="0">
-        <Flex direction="column" align="center" justify="center">
-          <Text fontWeight="700" fontSize={["2xl", "5xl"]} lineHeight={["2.25rem", "4.5rem"]} color="gray.50" > {title} </Text>
-          <Text fontWeight="700" fontSize={["sm", "2xl"]} lineHeight={["1.313rem", "2.25rem"]} color="gray.50" > {subtitle} </Text>
-        </Flex>
-      </Center>
-    </Box>
+      <Box position="absolute">
+        <Link href={`/continent/${id}`} >
+          <Flex as="a" direction="column" align="center" justify="center">
+            <Text fontWeight="700" fontSize={["2xl", "5xl"]} lineHeight={["2.25rem", "4.5rem"]} color="gray.50" > {name} </Text>
+            <Text fontWeight="700" fontSize={["sm", "2xl"]} lineHeight={["1.313rem", "2.25rem"]} color="gray.50" > {description} </Text>
+          </Flex>
+        </Link>
+      </Box>
+    </Flex>
   );
 }

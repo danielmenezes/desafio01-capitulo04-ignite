@@ -1,0 +1,136 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "name": "Europa",
+      "description": "O continente mais antigo",
+      "about": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+      "background": "europa.png",
+      "num_country": 50,
+      "num_languages": 24,
+      "most_visited_countries": 30
+    },
+    {
+      "id": 2,
+      "name": "América do norte",
+      "description": "O segundo maior continente do mundo",
+      "about": "A América do Norte é um subcontinente que compreende a porção setentrional do continente americano.",
+      "background": "america-do-norte.png",
+      "num_country": 3,
+      "num_languages": 4,
+      "most_visited_countries": 30
+    },
+    {
+      "id": 3,
+      "name": "América do Sul",
+      "description": "O continente mais belo",
+      "about": "A América do Sul é um continente que compreende a porção meridional da América. Também é considerada um subcontinente do continente americano. A sua extensão é de 17 819 100 km², abrangendo 12% da superfície terrestre e 6% da população mundial.",
+      "background": "america-do-sul.png",
+      "num_country": 12,
+      "num_languages": 9,
+      "most_visited_countries": 30
+    },
+    {
+      "id": 4,
+      "name": "Asia",
+      "description": "O continente mais populoso",
+      "about": "A Ásia é o maior dos continentes, tanto em área como em população. Abrange um terço das partes sólidas da superfície da Terra e é responsável por abrigar quase três quintos da população mundial.",
+      "background": "asia.png",
+      "num_country": 50,
+      "num_languages": 51,
+      "most_visited_countries": 30
+    },
+    {
+      "id": 5,
+      "name": "África",
+      "description": "O continente mais diverso",
+      "about": "A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente mais populoso da Terra com cerca de um bilhão de pessoas, representando cerca de um sétimo da população mundial.",
+      "background": "africa.png",
+      "num_country": 54,
+      "num_languages": 1000,
+      "most_visited_countries": 30
+    },
+    {
+      "id": 6,
+      "name": "Oceania",
+      "description": "O Continente das ilhas",
+      "about": "Oceania ou Oceânia é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico. O termo Oceania foi criado em 1831 pelo explorador francês Dumont d'Urville.",
+      "background": "oceania.png",
+      "num_country": 14,
+      "num_languages": 820,
+      "most_visited_countries": 30
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "name": "Londres",
+      "bg": "londres.png",
+      "country": {
+        "flag": "reino-unido.png",
+        "name": "Reino Unido"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 2,
+      "name": "Roma",
+      "bg": "roma.png",
+      "country": {
+        "flag": "italia.png",
+        "name": "Itália"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 3,
+      "name": "Amsterdã",
+      "bg": "amsterda.png",
+      "country": {
+        "flag": "holanda.png",
+        "name": "Holanda"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 4,
+      "name": "Lisboa",
+      "bg": "lisboa.png",
+      "country": {
+        "flag": "portugal.png",
+        "name": "Portugal"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 5,
+      "name": "Florença",
+      "bg": "florenca.png",
+      "country": {
+        "flag": "italia.png",
+        "name": "Itália"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 6,
+      "name": "Budapeste",
+      "bg": "budapeste.png",
+      "country": {
+        "flag": "hungria.png",
+        "name": "Hungria"
+      },
+      "continentId": 1
+    },
+    {
+      "id": 7,
+      "name": "Barcelona",
+      "bg": "barcelona.png",
+      "country": {
+        "flag": "espanha.png",
+        "name": "Espanha"
+      },
+      "continentId": 1
+    }
+  ]
+}
